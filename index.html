@@ -211,7 +211,7 @@
   <section class="subscription-section">
     <h2>Subscribe to our Newsletter</h2>
     <!-- Simple Bootstrap subscription form -->
-    <form>
+    <form id="subscribeForm">
       <!-- Email input -->
       <div class="mb-3">
         <input type="email" class="form-control" id="subscriberEmail" placeholder="Enter your email" required>
@@ -219,6 +219,33 @@
       <!-- Submit button -->
       <button type="submit" class="btn btn-primary">Subscribe</button>
     </form>
+    <!-- Bootstrap Modal for notification -->
+    <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="subscribeModalLabel">Thank You!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            You have successfully subscribed to Intel's sustainability newsletter.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Show Bootstrap modal on form submit
+      document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent actual form submission
+        var modal = new bootstrap.Modal(document.getElementById('subscribeModal'));
+        modal.show();
+        // Optionally, clear the input
+        document.getElementById('subscriberEmail').value = '';
+      });
+    </script>
     <!--
       This form uses Bootstrap classes:
       - .form-label for the label
@@ -241,5 +268,8 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"      
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" 
+    crossorigin="anonymous"></script>
 </body>
 </html>
