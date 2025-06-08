@@ -45,6 +45,7 @@ header {
   justify-content: flex-start; /* Align cards to the left */
   scroll-behavior: smooth; /* Smooth scrolling */
   scroll-snap-type: x mandatory; /* Enable horizontal scroll snap */
+  background-color: #f2f2f2; /* Light gray background for timeline section */
 }
 
 /* Timeline card styling */
@@ -127,7 +128,8 @@ body > p {
 .subscription-section {
   text-align: center; /* Center all content in the section */
   margin-top: 40px;
-  margin-bottom: 40px;
+  background-color: #f2f2f2; /* Light gray background */;
+  padding: 30px 0; /* Top and bottom padding */
 }
 
 .subscription-section form {
@@ -135,6 +137,34 @@ body > p {
   text-align: left;      /* Keep form fields left-aligned inside the form */
   max-width: 400px;
   width: 100%;
+}
+
+/* Footer section styling */
+.footer-section {
+  background: linear-gradient(90deg, #0068b5 0%, #003366 100%); /* Blue gradient */
+  color: #fff; /* White text */
+  padding: 28px 0 18px 0; /* Top and bottom padding */
+  text-align: center;
+  
+}
+
+.footer-section .footer-link {
+  color: #b3e0ff; /* Light blue links */
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.footer-section .footer-link:hover {
+  color: #fff; /* White on hover */
+  text-decoration: underline;
+}
+
+.footer-section .footer-copy {
+  margin-top: 12px;
+  font-size: 1em;
+  color: #e0e0e0;
 }
 
 /* Responsive: Stack cards vertically on small screens */
