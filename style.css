@@ -1,0 +1,143 @@
+/* style.css - Simple Intel Timeline Styles for Beginners */
+
+/* Set a clean, readable font for the whole page */
+body {
+  font-family: Arial, Helvetica, sans-serif; /* Use common web-safe fonts */
+  background-color: #f5faff; /* Light blue background */
+  color: #222; /* Dark text for readability */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header section styling */
+header {
+  /* Add a blue to dark blue gradient background */
+  background: linear-gradient(135deg, #0068b5 0%, #003366 100%); /* Blue to dark blue */
+  color: #fff; /* White text */
+  padding: 32px 0 24px 0; /* Top and bottom padding */
+  text-align: center; /* Center all header content */
+}
+
+.header-container img {
+  width: 120px; /* Set logo size */
+  margin-bottom: 12px;
+}
+
+.header-container h1 {
+  margin: 12px 0 24px 0; /* Increased bottom margin for more space below h1 */
+  font-size: 3em;
+}
+
+.header-container p {
+  margin: 0 auto;
+  max-width: 500px;
+  font-size: 1.3em;
+}
+
+/* Timeline section styling */
+.timeline-section {
+  display: flex;
+  flex-direction: row; /* Arrange cards in a row (horizontal) */
+  flex-wrap: nowrap; /* Prevent wrapping on large screens */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  gap: 20px; /* Space between cards */
+  padding: 32px 10px 10px 10px;
+  justify-content: flex-start; /* Align cards to the left */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  scroll-snap-type: x mandatory; /* Enable horizontal scroll snap */
+}
+
+/* Timeline card styling */
+.timeline-card {
+  background: #fff; /* White card background */
+  border: none; /* Removed border for a cleaner look */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 18px rgba(0,104,181,0.18); /* Stronger blue drop shadow */
+  width: 260px;
+  min-width: 260px; /* Prevent shrinking for horizontal scroll */
+  flex: 0 0 auto; /* Prevent cards from stretching */
+  padding: 18px 14px 16px 14px;
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+  scroll-snap-align: start; /* Snap each card to the start of the container */
+}
+
+/* Card hover effect */
+.timeline-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 28px rgba(0,104,181,0.28); /* Stronger shadow on hover */
+}
+
+/* Card headings */
+.timeline-card h2 {
+  color: #0068b5;
+  margin: 0 0 4px 0;
+  font-size: 1.2em;
+}
+
+.timeline-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1em;
+  color: #222;
+}
+
+/* Card images */
+.timeline-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+/* Card text */
+.timeline-card p {
+  font-size: 0.98em;
+  margin: 0;
+  opacity: 0; /* Hide text by default */
+  max-height: 0; /* Collapse space */
+  overflow: hidden; /* Hide overflow */
+  transition: opacity 0.4s, max-height 0.4s; /* Smooth reveal */
+}
+
+.timeline-card:hover p {
+  opacity: 1; /* Show text on hover */
+  max-height: 200px; /* Enough space for text */
+}
+
+/* Timeline instruction text */
+body > p {
+  text-align: center;
+  color: #0068b5;
+  font-weight: bold;
+  margin: 24px 0 16px 0;
+}
+
+/* Responsive: Stack cards vertically on small screens */
+@media (max-width: 700px) {
+  .header-container h1 {
+    font-size: 2em; /* Smaller heading on small screens */
+  }
+  .header-container p {
+    font-size: 1em; /* Smaller paragraph on small screens */
+  }
+  .timeline-section {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: visible; /* Remove horizontal scroll */
+    scroll-snap-type: none; /* Disable snap on small screens */
+  }
+  .timeline-card {
+    width: 95%;
+    min-width: 0;
+    max-width: 340px;
+    scroll-snap-align: none; /* Disable snap on small screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .header-container h1 {
+    font-size: 1.3em; /* Even smaller heading on very small screens */
+  }
+  .header-container p {
+    font-size: 0.9em;
+  }
+}
