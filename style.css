@@ -111,6 +111,32 @@ body > p {
   margin: 24px 0 16px 0;
 }
 
+/* Three column section styling */
+.three-column-section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.three-column-section .material-icons {
+  font-size: 1.5em; /* Slightly larger icon size for column headings */
+  vertical-align: middle; /* Align icon with text */
+  margin-right: 6px; /* Add a little space between icon and text */
+}
+
+/* Subscription section styling */
+.subscription-section {
+  text-align: center; /* Center all content in the section */
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.subscription-section form {
+  display: inline-block; /* Center the form itself */
+  text-align: left;      /* Keep form fields left-aligned inside the form */
+  max-width: 400px;
+  width: 100%;
+}
+
 /* Responsive: Stack cards vertically on small screens */
 @media (max-width: 700px) {
   .header-container h1 {
@@ -130,6 +156,10 @@ body > p {
     min-width: 0;
     max-width: 340px;
     scroll-snap-align: none; /* Disable snap on small screens */
+  }
+  .three-column-section .col-md-4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 

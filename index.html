@@ -9,6 +9,7 @@
     rel="stylesheet" 
     integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" 
     crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
@@ -144,54 +145,88 @@
   <p>Scroll to view timeline | Hover over cards to learn more!</p>
 
     <!-- 3-Column Content Section -->
-  <section>
-    <div>
-      
-      <!-- Column 1 -->
-      <div>
-        <h2>RISE Strategy</h2>
-        <p>
-          Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
-          Intel sets ambitious 2030 goals, including driving industry-wide 
-          progress on climate action, water stewardship, and waste reduction.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
-      </div>
+  <section class="three-column-section">
+    <!-- Add a container for spacing on both sides -->
+    <div class="container">
+      <div class="row">
+        <!-- Column 1 -->
+        <div class="col-md-4 mb-4 px-3">
+          <!-- Each column uses col-md-4 for equal width on medium+ screens -->    
+          <h2>
+            <span class="material-icons">eco</span>
+            RISE Strategy
+          </h2>
+          <p>
+            Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
+            Intel sets ambitious 2030 goals, including driving industry-wide 
+            progress on climate action, water stewardship, and waste reduction.
+          </p>
+          <!-- Learn More Button -->
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
 
-      <!-- Column 2 -->
-      <div>
-        <h2>Commitment</h2>
-        <p>
-          In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
-          (Scope 1 and 2) by 2040. This commitment builds on decades of 
-          environmental initiatives and partnerships across the semiconductor 
-          industry.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
-      </div>
+        <!-- Column 2 -->
+        <div class="col-md-4 mb-4 px-3">
+          <h2>
+            <span class="material-icons">public</span>
+            Commitment
+          </h2>
+          <p>
+            In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
+            (Scope 1 and 2) by 2040. This commitment builds on decades of 
+            environmental initiatives and partnerships across the semiconductor 
+            industry.
+          </p>
+          <!-- Learn More Button -->
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
 
-      <!-- Column 3 -->
-      <div>
-        <h2>Water &amp; Waste</h2>
-        <p>
-          Intel conserves billions of gallons of water annually and 
-          collaborates with local communities to restore watersheds.
-          Intel also upcycles and recycles materials to reduce waste and 
-          advance a circular economy.
-        </p>
-        <!-- Learn More Button -->
-        <a href="#">Learn More</a>
+        <!-- Column 3 -->
+        <div class="col-md-4 mb-4 px-3">
+          <h2>
+            <span class="material-icons">water_drop</span>
+            Water &amp; Waste
+          </h2>
+          <p>
+            Intel conserves billions of gallons of water annually and 
+            collaborates with local communities to restore watersheds.
+            Intel also upcycles and recycles materials to reduce waste and 
+            advance a circular economy.
+          </p>
+          <!-- Learn More Button -->
+          <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
       </div>
-
     </div>
+    <!--
+      .row creates a horizontal group of columns.
+      .col-md-4 means each column takes up 1/3 of the row on medium and larger screens.
+      .mb-4 adds margin below each column for vertical spacing.
+      .px-3 adds padding to the left and right of each column for horizontal spacing.
+      On small screens, columns will stack vertically.
+      .btn and .btn-primary add Bootstrap button styles.
+    -->
   </section>
 
   <!-- Subscription Form -->
-  <section>
+  <section class="subscription-section">
     <h2>Subscribe to our Newsletter</h2>
-    <!-- Add form here -->
+    <!-- Simple Bootstrap subscription form -->
+    <form>
+      <!-- Email input -->
+      <div class="mb-3">
+        <input type="email" class="form-control" id="subscriberEmail" placeholder="Enter your email" required>
+      </div>
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+    <!--
+      This form uses Bootstrap classes:
+      - .form-label for the label
+      - .form-control for the input field
+      - .btn and .btn-primary for the button
+      The 'required' attribute makes sure the user enters an email.
+    -->
   </section>
 
 </body>
