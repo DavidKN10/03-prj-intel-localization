@@ -124,6 +124,14 @@ body > p {
   margin-right: 6px; /* Add a little space between icon and text */
 }
 
+/* Icon images in the three-column section headings */
+.three-column-section h2 img {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
 /* Subscription section styling */
 .subscription-section {
   text-align: center; /* Center all content in the section */
